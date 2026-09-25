@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brew Book">
+<meta name="theme-color" content="#E6E4DD" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161A" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Brew Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#E6E4DD;
+  --card:#F2F1EC;
+  --ink:#161A17;
+  --slate:#6C716A;
+  --rule:#CBC8BE;
+  --water:#1F3FBF;
+  --water-soft:rgba(31,63,191,.10);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  color-scheme:light dark;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --stone:#14161A;
+    --card:#1C1F24;
+    --ink:#E9E8E2;
+    --slate:#9198A0;
+    --rule:#2E333A;
+    --water:#7C9BFF;
+    --water-soft:rgba(124,155,255,.14);
+  }
+}
+:root[data-theme="dark"]{
+  --stone:#14161A; --card:#1C1F24; --ink:#E9E8E2;
+  --slate:#9198A0; --rule:#2E333A;
+  --water:#7C9BFF; --water-soft:rgba(124,155,255,.14);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--stone);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  font-size:16px;line-height:1.6;
+  padding-bottom:calc(112px + env(safe-area-inset-bottom,0px));
+  -webkit-tap-highlight-color:transparent;
+  overscroll-behavior-y:none;
+}
+button{-webkit-user-select:none;user-select:none;touch-action:manipulation}
+.wrap{max-width:640px;margin:0 auto;padding:20px 18px 0}
+
+header{margin-bottom:22px}
+h1{font-size:20px;font-weight:700;letter-spacing:.06em;margin:0 0 2px}
+header p{margin:0;color:var(--slate);font-size:13px}
+
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -18px 14px;padding:0 18px 2px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;border:1px solid var(--rule);background:transparent;color:var(--slate);
+  font:inherit;font-size:13px;font-weight:500;padding:7px 14px;border-radius:999px;cursor:pointer;
+}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--stone)}
+.tab:focus-visible{outline:2px solid var(--water);outline-offset:2px}
+
+.sub{display:flex;gap:18px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.sub button{
+  border:0;background:none;font:inherit;font-size:14px;font-weight:500;color:var(--slate);
+  padding:0 0 9px;margin-bottom:-1px;border-bottom:2px solid transparent;cursor:pointer;
+}
+.sub button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--water)}
+
+.gear{font-size:13px;color:var(--slate);margin:0 0 16px;line-height:1.75}
+.gear b{color:var(--ink);font-weight:500}
+
+.spec{display:flex;gap:0;border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:22px;background:var(--card)}
+.spec div{flex:1;padding:11px 12px;border-right:1px solid var(--rule)}
+.spec div:last-child{border-right:0}
+.spec span{display:block;font-size:11px;color:var(--slate)}
+.spec strong{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+ol.steps{list-style:none;margin:0 0 24px;padding:0}
+ol.steps li{
+  position:relative;overflow:hidden;
+  display:flex;align-items:baseline;gap:12px;
+  padding:13px 14px;border:1px solid var(--rule);border-radius:10px;
+  background:var(--card);margin-bottom:8px;
+}
+ol.steps li .fill{
+  position:absolute;inset:0 auto 0 0;width:0;background:var(--water-soft);
+  transition:width .25s linear;pointer-events:none;
+}
+ol.steps li > *{position:relative}
+li.on{border-color:var(--water)}
+li.done{opacity:.45}
+.at{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;min-width:52px}
+.body{flex:1;min-width:0}
+.body .n{font-weight:500;font-size:15px}
+.body .s{font-size:12px;color:var(--slate);line-height:1.5}
+.ml{font-variant-numeric:tabular-nums;font-weight:700;font-size:17px;white-space:nowrap}
+.ml em{font-style:normal;font-size:11px;font-weight:400;color:var(--slate);margin-left:1px}
+
+h2{font-size:13px;font-weight:700;margin:0 0 8px;letter-spacing:.04em}
+.notes{font-size:13.5px;color:var(--slate);line-height:1.85;margin:0 0 10px;padding-left:1.1em}
+.notes li{margin-bottom:3px}
+.src{font-size:12px;color:var(--slate);margin:0 0 40px}
+.src a{color:var(--water)}
+
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:5;
+  background:var(--card);border-top:1px solid var(--rule);
+  padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));
+}
+.bar-in{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.clock{font-variant-numeric:tabular-nums;font-size:40px;font-weight:700;line-height:1;letter-spacing:-.01em}
+.next{flex:1;min-width:0;font-size:12px;color:var(--slate);line-height:1.4}
+.next b{display:block;color:var(--ink);font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar button{
+  border:0;font:inherit;font-weight:700;font-size:14px;border-radius:999px;padding:11px 20px;cursor:pointer;
+  background:var(--water);color:#fff;
+}
+.bar button.ghost{background:transparent;color:var(--slate);border:1px solid var(--rule);padding:11px 14px;font-weight:500}
+.bar button:focus-visible{outline:2px solid var(--water);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Brew Book</h1>
+    <p>4店舗のレシピと注湯タイマー</p>
+  </header>
+
+  <div class="tabs" id="shops" role="tablist" aria-label="店舗"></div>
+  <div class="sub" id="recipes" role="tablist" aria-label="レシピ"></div>
+
+  <p class="gear" id="gear"></p>
+  <div class="spec" id="spec"></div>
+  <ol class="steps" id="steps"></ol>
+
+  <h2>メモ</h2>
+  <ul class="notes" id="notes"></ul>
+  <p class="src" id="src"></p>
+</div>
+
+<div class="bar">
+  <div class="bar-in">
+    <div class="clock" id="clock">0:00</div>
+    <div class="next"><b id="nextName">スタートで計測開始</b><span id="nextSub"></span></div>
+    <button id="reset" class="ghost">リセット</button>
+    <button id="toggle">スタート</button>
+  </div>
+</div>
+
+<script>
+const DATA = [
+{
+  shop:"depe coffee shop", short:"depe",
+  gear:"Origami dripper ／ Natural・Infused は Abaca、Washed・Honey は Origami の Wave Filter で使い分け",
+  src:{t:"店頭レシピカード（写真）", u:null},
+  recipes:[
+    {name:"Hot", dose:"15g", water:"240ml", temp:"91°C",
+     steps:[
+      {t:0,  n:"1st Pour", s:"0:00〜0:06", ml:40},
+      {t:30, n:"2nd Pour", s:"0:30〜0:50・+140ml", ml:180},
+      {t:90, n:"3rd Pour", s:"2nd が落ち切ったら・+60ml（目安1:30）", ml:240},
+      {t:150,n:"End",      s:"〜2:30 で終了", ml:240}
+     ],
+     notes:["3投目は時間ではなく「2nd が落ち切ったら」が合図。1:30 はあくまで目安として置いてます",
+            "フィルターは豆の精製方法で切り替え"]},
+    {name:"Ice", dose:"15g", water:"150ml", temp:"91°C",
+     steps:[
+      {t:0, n:"1st Pour", s:"0:00〜0:06", ml:40},
+      {t:30,n:"2nd Pour", s:"0:30〜0:40", ml:80},
+      {t:60,n:"3rd Pour", s:"〜1:10", ml:120},
+      {t:85,n:"4th Pour", s:"〜1:35", ml:150}
+     ],
+     notes:["Abaca フィルター。氷は先でも後でも可",
+            "3投目・4投目の開始時刻は写真でカップに隠れていた部分があり、推定値です。店頭で確認できたら直したいところ"]}
+  ]
+},
+{
+  shop:"ENgrave coffee roasters", short:"ENgrave",
+  gear:"メリタ 1×1 ／ ペーパー ボンマック NB-100S ／ グラインダー MAZZER ZM（Grind size 0.414）",
+  src:{t:"BREW GUIDE｜ENgravecoffeeroasters", u:"https://engrave.base.shop/p/00001"},
+  recipes:[
+    {name:"Hot", dose:"15g", water:"210g", temp:"84–86°C",
+     steps:[
+      {t:0,  n:"蒸らし",  s:"0:00〜0:20・全体にかけて", ml:40},
+      {t:20, n:"2投目",  s:"0:20〜0:40・中心に小さな円を細く", ml:120},
+      {t:40, n:"3投目",  s:"0:40〜1:05", ml:170},
+      {t:65, n:"4投目",  s:"1:05〜1:30", ml:210},
+      {t:120,n:"落ち切り", s:"2:00前後", ml:210}
+     ],
+     notes:["比率 1:15。粉にお湯が触れた瞬間にタイマースタート",
+            "可能なら茶こしで微粉 0.1〜0.2g をカット",
+            "お湯は細めに真下へ。水位が下がりきる前に次の一投",
+            "手首から肘までを固定して前後左右に。腕は上下させない",
+            "焙煎度合いに関わらず同じレシピで抽出"]},
+    {name:"Ice Drip", dose:"18g", water:"170g", temp:"84–86°C",
+     steps:[
+      {t:0,  n:"蒸らし",  s:"0:00〜0:20・全体にかけて", ml:50},
+      {t:20, n:"2投目",  s:"0:20〜0:40", ml:100},
+      {t:45, n:"3投目",  s:"0:45〜1:05", ml:135},
+      {t:65, n:"4投目",  s:"1:05〜1:30", ml:170},
+      {t:100,n:"落ち切り→氷60g", s:"溶かしきってから氷のグラスへ", ml:170}
+     ],
+     notes:["比率 1:9.4",
+            "落ち切ったあとに氷 約60g を入れて溶かしきる",
+            "注ぎ方の要点は Hot と同じ"]}
+  ]
+},
+{
+  shop:"+ninth coffee", short:"+ninth",
+  gear:"Hario V60 Neo / V60 ／ アバカフィルター ／ 湯温 90°C ／ 氷 30〜40g をサーバーに先入れ",
+  src:{t:"推奨ハンドドリップレシピ［ICE］｜+ninth coffee", u:"https://www.addninthcoffee.com/items/143052635"},
+  recipes:[
+    {name:"Ice", dose:"14.5g", water:"140ml", temp:"90°C",
+     steps:[
+      {t:0, n:"一湯目", s:"全体をまんべんなく湿らせる", ml:35},
+      {t:40,n:"二湯目", s:"+55ml・細くゆっくり", ml:90},
+      {t:70,n:"三湯目", s:"+50ml", ml:140},
+      {t:90,n:"落ち切り", s:"1:30〜1:45（V60 は +5秒ほど）", ml:140}
+     ],
+     notes:["たっぷりのお湯でペーパーリンク（リンス）。器具を温めるのは意識しなくてよい",
+            "サーバーに氷 30〜40g を入れてから抽出開始",
+            "3湯とも 4〜6ml/s、目標は約5ml/s",
+            "注ぎ口と液面の距離は 3〜4cm。一湯あたり1〜2周、中心に10円玉くらいの円",
+            "濃い・刺々しい → 粗く／薄い・水っぽい → 細かく",
+            "挽き目は Hot と共通で OK（EK#13.5/16）。HOT レシピは同ショップの別ページにあり"]}
+  ]
+},
+{
+  shop:"Definitive.", short:"Definitive.",
+  gear:"メリタ ／ ペーパー ボンマック NB-100S・リンスしない ／ 豆 グラインド前14.1g → 微粉を除いて14.0g",
+  src:{t:"Recipe Sticker（商品写真）／ Iced Coffee Kit 同梱レシピ（Kotowa GW で調整・Washed 全般に使用可）", u:null},
+  recipes:[
+    {name:"Hot 1:10", dose:"14g", water:"145ml", temp:"84°C",
+     steps:[
+      {t:0, n:"蒸らし", s:"0 → 7秒で注ぎきる", ml:30},
+      {t:20,n:"1投目", s:"20〜35秒", ml:75},
+      {t:40,n:"2投目", s:"40〜55秒", ml:110},
+      {t:60,n:"3投目", s:"60〜70秒", ml:145}
+     ],
+     notes:["比率 1:10",
+            "注湯のリズムは Ice と同じで、各投の注ぐ量だけ多い",
+            "写真がブレていて、蒸らしの終了は7秒か8秒か判別しにくい箇所あり（Ice は8秒）"]},
+    {name:"Ice 旧メリタ", dose:"14g", water:"90ml", temp:"90°C",
+     steps:[
+      {t:0, n:"蒸らし",  s:"0:00 開始 → 0:08 注湯終了", ml:30},
+      {t:20,n:"1投目",  s:"0:20〜0:30", ml:60},
+      {t:35,n:"2投目",  s:"0:35〜0:40", ml:75},
+      {t:45,n:"3投目",  s:"0:45〜0:50", ml:90},
+      {t:50,n:"落とし切り→氷で急冷", s:"氷の量は少なすぎなければ神経質にならなくてよい", ml:90}
+     ],
+     notes:["味の方向：甘さと奥行き感",
+            "ドリッパーは温める・サーバーは温めない",
+            "Paragon があれば最初から最後まで使用"]},
+    {name:"Ice 新メリタ", dose:"14g", water:"90ml", temp:"84°C",
+     steps:[
+      {t:0, n:"蒸らし",  s:"0:00 開始 → 0:08 注湯終了", ml:30},
+      {t:20,n:"1投目",  s:"0:20〜0:30", ml:60},
+      {t:35,n:"2投目",  s:"0:35〜0:40", ml:75},
+      {t:45,n:"3投目",  s:"0:45〜0:50", ml:90},
+      {t:50,n:"落とし切り→氷で急冷", s:"氷の量は少なすぎなければ神経質にならなくてよい", ml:90}
+     ],
+     notes:["味の方向：クリーンでシャープ",
+            "挽き目は旧メリタよりわずかに細かく。1メモリ程度から調整",
+            "旧メリタとの主な差は湯温（90°C → 84°C）",
+            "ドリッパーは温める・サーバーは温めない",
+            "Paragon があれば最初から最後まで使用"]}
+  ]
+}
+];
+
+let si=0, ri=0, t0=null, elapsed=0, running=false, raf=null, lastStep=-1;
+
+const $=id=>document.getElementById(id);
+const fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
+
+try{
+  const saved=JSON.parse(localStorage.getItem("brewbook")||"null");
+  if(saved && DATA[saved.s] && DATA[saved.s].recipes[saved.r]){si=saved.s;ri=saved.r;}
+}catch(e){}
+
+function save(){try{localStorage.setItem("brewbook",JSON.stringify({s:si,r:ri}))}catch(e){}}
+
+function renderShops(){
+  $("shops").innerHTML="";
+  DATA.forEach((d,i)=>{
+    const b=document.createElement("button");
+    b.className="tab";b.textContent=d.short;b.setAttribute("role","tab");
+    b.setAttribute("aria-selected",i===si);
+    b.onclick=()=>{si=i;ri=0;stop();render();save();};
+    $("shops").appendChild(b);
+  });
+}
+
+function render(){
+  const shop=DATA[si], rec=shop.recipes[ri];
+  renderShops();
+
+  $("recipes").innerHTML="";
+  shop.recipes.forEach((r,i)=>{
+    const b=document.createElement("button");
+    b.textContent=r.name;b.setAttribute("role","tab");b.setAttribute("aria-selected",i===ri);
+    b.onclick=()=>{ri=i;stop();render();save();};
+    $("recipes").appendChild(b);
+  });
+
+  $("gear").innerHTML="<b>"+shop.shop+"</b><br>"+shop.gear;
+
+  $("spec").innerHTML=
+    '<div><span>豆</span><strong>'+rec.dose+'</strong></div>'+
+    '<div><span>湯量</span><strong>'+rec.water+'</strong></div>'+
+    '<div><span>湯温</span><strong>'+rec.temp+'</strong></div>';
+
+  $("steps").innerHTML="";
+  rec.steps.forEach(st=>{
+    const li=document.createElement("li");
+    li.innerHTML='<span class="fill"></span>'+
+      '<span class="at">'+fmt(st.t)+'</span>'+
+      '<span class="body"><span class="n">'+st.n+'</span>'+
+      (st.s?'<div class="s">'+st.s+'</div>':'')+'</span>'+
+      '<span class="ml">'+st.ml+'<em>ml</em></span>';
+    $("steps").appendChild(li);
+  });
+
+  $("notes").innerHTML=rec.notes.map(n=>"<li>"+n+"</li>").join("");
+  $("src").innerHTML=shop.src.u
+    ? '出典：<a href="'+shop.src.u+'" target="_blank" rel="noopener">'+shop.src.t+'</a>'
+    : '出典：'+shop.src.t;
+
+  lastStep=-1;
+  paint();
+}
+
+function paint(){
+  const steps=DATA[si].recipes[ri].steps;
+  const els=$("steps").children;
+  let cur=-1;
+  for(let i=0;i<steps.length;i++) if(elapsed>=steps[i].t) cur=i;
+
+  for(let i=0;i<els.length;i++){
+    const li=els[i], fill=li.querySelector(".fill");
+    li.className="";
+    if(i<cur) li.className="done";
+    if(i===cur && running) li.className="on";
+    let w=0;
+    if(i<cur) w=100;
+    else if(i===cur){
+      const end=steps[i+1]?steps[i+1].t:steps[i].t+30;
+      w=Math.min(100,(elapsed-steps[i].t)/(end-steps[i].t)*100);
+    }
+    fill.style.width=w+"%";
+  }
+
+  if(running && cur!==lastStep && cur>=0){
+    lastStep=cur;
+    if(navigator.vibrate) navigator.vibrate(60);
+  }
+
+  const nxt=steps.find(s=>s.t>elapsed);
+  if(!running && elapsed===0){
+    $("nextName").textContent="スタートで計測開始";$("nextSub").textContent="";
+  }else if(nxt){
+    $("nextName").textContent="次：" + nxt.n + "（" + nxt.ml + "ml まで）";
+    $("nextSub").textContent="あと "+Math.ceil(nxt.t-elapsed)+"秒";
+  }else{
+    $("nextName").textContent="全工程おわり";$("nextSub").textContent="";
+  }
+  $("clock").textContent=fmt(elapsed);
+}
+
+function tick(){
+  elapsed=(performance.now()-t0)/1000;
+  paint();
+  raf=requestAnimationFrame(tick);
+}
+let wl=null;
+async function keepAwake(on){
+  try{
+    if(on && "wakeLock" in navigator && !wl){wl=await navigator.wakeLock.request("screen");wl.addEventListener("release",()=>{wl=null});}
+    if(!on && wl){await wl.release();wl=null;}
+  }catch(e){}
+}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&running)keepAwake(true)});
+function start(){
+  keepAwake(true);
+  running=true;t0=performance.now()-elapsed*1000;
+  $("toggle").textContent="一時停止";
+  raf=requestAnimationFrame(tick);
+}
+function pause(){
+  keepAwake(false);
+  running=false;cancelAnimationFrame(raf);
+  $("toggle").textContent="再開";paint();
+}
+function stop(){
+  keepAwake(false);
+  running=false;cancelAnimationFrame(raf);elapsed=0;lastStep=-1;
+  $("toggle").textContent="スタート";paint();
+}
+$("toggle").onclick=()=>running?pause():start();
+$("reset").onclick=stop;
+
+render();
+</script>
+</body>
+</html>
